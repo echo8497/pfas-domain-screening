@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this software or the candidate list it releases, please cite both the archived release and the accompanying manuscript."
-title: "pfas-domain-screening: criterion-dependent applicability-domain analysis and a read-across priority list of 2,390 emerging PFAS alternatives"
+title: "pfas-domain-screening: Criterion-dependent applicability-domain assessment of PFAS bioactivity machine learning reveals gaps in replacement-chemical space"
 version: "1.0.0"
-date-released: "2026-10-19"
+date-released: "2026-10-20"
 license: MIT
 repository-code: "https://github.com/echo8497/pfas-domain-screening"
 
@@ -11,7 +11,7 @@ abstract: >-
   against a 26-endpoint PFAS bioactivity panel, quantifies how far the panel's
   applicability domain extends over replacement chemistry under five different
   criteria, and releases a tiered read-across priority list of 2,390 candidate
-  alternatives.
+  replacement-space chemicals.
 keywords:
   - per- and polyfluoroalkyl substances
   - applicability domain

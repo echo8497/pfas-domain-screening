@@ -2,13 +2,13 @@
 
 Code and derived tables for the manuscript
 
-> **Criterion-dependent applicability-domain failure in PFAS bioactivity machine learning: a read-across priority list of 2,390 emerging alternatives**
+> **Criterion-dependent applicability-domain assessment of PFAS bioactivity machine learning reveals gaps in replacement-chemical space**
 
 The study screens all 19,767 unique structures of the United States Environmental
 Protection Agency **PFASSTRUCT V6** suspect list against a 26-endpoint PFAS
 bioactivity panel (1,012 substances), measures how far the panel's applicability
 domain (AD) extends over replacement chemistry under five different criteria, and
-releases a tiered read-across priority list of candidate alternatives.
+releases a tiered read-across priority list of candidate replacement-space chemicals.
 
 This repository is the software artefact referenced under *Availability of data
 and materials* in the manuscript. It contains the analysis pipeline, the derived
