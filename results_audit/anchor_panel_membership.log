@@ -1,0 +1,62 @@
+==============================================================================
+锚定物质 × 生物活性面板：结构身份与标签覆盖审计
+运行时间 2026-10-13 16:13:52
+==============================================================================
+
+面板：1012 条结构，26 个 PCBA 终点
+  22 终点集（min_pos=15）：22
+  12 终点集（min_pos=30）：12
+  面板唯一 InChIKey：1012
+
+锚定物质：20 条
+
+substance             InChIKey                     in_panel labels  in22  in12  sim    cause
+--------------------------------------------------------------------------------------------
+PFOA                  SNGREZUHAYWORS-UHFFFAOYSA-N  False    0       0     0     0.7647 —
+PFNA                  UZUFPBIDKMEQEQ-UHFFFAOYSA-N  False    0       0     0     0.7647 —
+PFDA                  PCIUEQPBYFRTEM-UHFFFAOYSA-N  False    0       0     0     0.7647 —
+PFHxA                 PXUULQAPEKKVAH-UHFFFAOYSA-N  False    0       0     0     0.7647 —
+PFHpA                 ZWBAMYVPMDSJGQ-UHFFFAOYSA-N  False    0       0     0     0.7647 —
+PFBA                  YPJUNDFVDDCYIH-UHFFFAOYSA-N  False    0       0     0     0.7500 —
+PFPeA                 CXZGQIAOTKWCDB-UHFFFAOYSA-N  False    0       0     0     0.8125 —
+PFOS                  YFSUTJLHUFNCNZ-UHFFFAOYSA-N  True     1       1     1     1.0000 true self-match (in panel)
+PFHxS                 QZHDEAJFRJCDMF-UHFFFAOYSA-N  False    0       0     0     1.0000 fingerprint degeneracy (identical bits to panel row 465, Tanimoto 1.0000)
+PFBS                  JGTNAGYHADQMCM-UHFFFAOYSA-N  False    0       0     0     0.9444 —
+PFDS                  HYWZIAVPBSTISZ-UHFFFAOYSA-N  False    0       0     0     1.0000 fingerprint degeneracy (identical bits to panel row 465, Tanimoto 1.0000)
+PFOSA                 RRRXPPIDPYTNJG-UHFFFAOYSA-N  False    0       0     0     0.5652 —
+N-EtFOSAA             CKRXVVGETMYFIO-UHFFFAOYSA-N  False    0       0     0     0.4000 —
+PFHxSA                WDZLGCSJJWEQJO-UHFFFAOYSA-N  False    0       0     0     0.5652 —
+GenX / HFPO-DA        CSEBNABAWMZWIF-UHFFFAOYSA-N  False    0       0     0     0.4054 —
+ADONA                 AFDRCEOKCOUICI-UHFFFAOYSA-N  False    0       0     0     0.2903 —
+F-53B (6:2 Cl-PFESA)  GGOUUEMCWBTDMT-UHFFFAOYSA-N  False    0       0     0     0.4333 —
+6:2 FTS               VIONGDJUYAYOPU-UHFFFAOYSA-N  False    0       0     0     0.4643 —
+4:2 FTS               TXGIGTRUEITPSC-UHFFFAOYSA-N  False    0       0     0     0.4286 —
+PFMOAA                IHYMJUVQLSNPPP-UHFFFAOYSA-N  False    0       0     0     0.3810 —
+
+已写出 results_audit\anchor_panel_membership.csv
+
+------------------------------------------------------------------------------
+指纹分辨率对照：二进制 vs 计数版 Morgan(radius=2, 2048 bit)
+------------------------------------------------------------------------------
+                 PFBS C4    PFHxS C6     PFOS C8    PFDS C10   (binary / count)
+PFBS C4      1.000/1.000 0.944/0.736 0.944/0.582 0.944/0.481
+PFHxS C6     0.944/0.736 1.000/1.000 1.000/0.791 1.000/0.654
+PFOS C8      0.944/0.582 1.000/0.791 1.000/1.000 1.000/0.827
+PFDS C10     0.944/0.481 1.000/0.654 1.000/0.827 1.000/1.000
+
+结论：二进制 Morgan 位向量对 C6/C8/C10 全氟磺酸盐不可区分（Tanimoto 恒为 1.000），计数版可区分（0.79/0.83/0.65）。
+
+------------------------------------------------------------------------------
+锚定物质之间的位级同一性（二进制 Morgan：同一组内互为 Tanimoto 1.000）
+------------------------------------------------------------------------------
+  组 1（n=5）：PFOA、PFNA、PFDA、PFHxA、PFHpA
+  组 2（n=3）：PFOS、PFHxS、PFDS
+  组 3（n=2）：PFOSA、PFHxSA
+  说明：这些分组的成员在**整数位向量**层面不可区分，但它们的经典结构式（含各自链长）并不相同——
+  这正是 Table 3「最大相似度」一列在解释时必须结合成因的原因。
+
+==============================================================================
+在面板中（InChIKey 精确匹配）：1 / 20
+max_sim = 1.00 且为真实自匹配：1
+max_sim = 1.00 但为指纹简并　：2
+==============================================================================

@@ -1,0 +1,67 @@
+==============================================================================
+锚点面板身份核验（20 条 = 14 legacy + 6 alternative）
+==============================================================================
+
+[0] PFASSTRUCT V6：19767 条记录，19767 个唯一 SMILES
+
+[1] 分子式核对（由 SMILES 计算 vs 公认分子式）
+    PFOA                     C8HF15O2       OK 
+    PFNA                     C9HF17O2       OK 
+    PFDA                     C10HF19O2      OK 
+    PFHxA                    C6HF11O2       OK 
+    PFHpA                    C7HF13O2       OK 
+    PFBA                     C4HF7O2        OK 
+    PFPeA                    C5HF9O2        OK 
+    PFOS                     C8HF17O3S      OK 
+    PFHxS                    C6HF13O3S      OK 
+    PFBS                     C4HF9O3S       OK 
+    PFDS                     C10HF21O3S     OK 
+    PFOSA                    C8H2F17NO2S    OK 
+    N-EtFOSAA                C12H8F17NO4S   OK 
+    PFHxSA                   C6H2F13NO2S    OK 
+    GenX / HFPO-DA           C6HF11O3       OK 
+    ADONA                    C7H2F12O4      OK 
+    F-53B (6:2 Cl-PFESA)     C8HClF16O4S    OK 
+    6:2 FTS                  C8H5F13O3S     OK 
+    4:2 FTS                  C6H5F9O3S      OK 
+    PFMOAA                   C3HF5O3        OK 
+    → 通过 20/20
+
+[2] 在 V6 清单中的定位（分级匹配）
+    PFOA                     T4 smiles_exact      DTXSID00880026     CAS 2395-00-8      盐/衍生物记录
+    PFNA                     T4 smiles_exact      DTXSID00896980     CAS 327176-80-7    盐/衍生物记录
+    PFDA                     T4 smiles_exact      DTXSID20880028     CAS 3830-45-3      盐/衍生物记录
+    PFHxA                    T4 smiles_exact      DTXSID20715083     CAS 423-47-2       盐/衍生物记录
+    PFHpA                    T4 smiles_exact      DTXSID00896627     CAS 21049-36-5     盐/衍生物记录
+    PFBA                     T4 smiles_exact      DTXSID20892762     CAS NOCAS_892762   盐/衍生物记录
+    PFPeA                    T4 smiles_exact      DTXSID00892487     CAS 45167-47-3     盐/衍生物记录
+    PFOS                     T4 smiles_exact      DTXSID00892720     CAS NOCAS_892720   盐/衍生物记录
+    PFHxS                    T4 smiles_exact      DTXSID001346449    CAS 92011-17-1     盐/衍生物记录
+    PFBS                     T4 smiles_exact      DTXSID1072052      CAS 70225-18-2     盐/衍生物记录
+    PFDS                     T4 smiles_exact      DTXSID00873014     CAS 126105-34-8    盐/衍生物记录
+    PFOSA                    T4 smiles_exact      DTXSID001016256    CAS 76752-79-9     盐/衍生物记录
+    N-EtFOSAA                T4 smiles_exact      DTXSID20880200     CAS 3871-50-9      盐/衍生物记录
+    PFHxSA                   T1 full_inchikey     DTXSID50469320     CAS 41997-13-1     游离酸
+    GenX / HFPO-DA           T4 smiles_exact      DTXSID00896647     CAS 67118-55-2     盐/衍生物记录
+    ADONA                    T4 smiles_exact      DTXSID00874026     CAS 958445-44-8    盐/衍生物记录
+        ↳ 已修正早期版本中的结构：OC(=O)C(F)(F)OC(F)(F)C(F)(F)OC(F)(F)C(F)(F)C(F)(F)F（C7HF13O4：多 1 个 F、少 1 个 H）
+    F-53B (6:2 Cl-PFESA)     T4 smiles_exact      DTXSID101348698    CAS 1621485-21-9   盐/衍生物记录
+        ↳ 已修正早期版本中的结构：OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)Cl（漏掉醚氧，实为全氟氯代磺酸）
+    6:2 FTS                  T4 smiles_exact      DTXSID00892821     CAS NOCAS_892821   盐/衍生物记录
+        ↳ 已修正早期版本中的结构：OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)CC（CH2CH2 错接在全氟链末端，实为 C8H6F12O3S）
+    4:2 FTS                  T4 smiles_exact      DTXSID101350176    CAS 2708218-87-3   盐/衍生物记录
+        ↳ 已修正早期版本中的结构：OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)CCCC（碳数 9，非 4:2 FTS）
+    PFMOAA                   T1 full_inchikey     DTXSID00408562     CAS 674-13-5       游离酸
+
+[3] 汇总
+    T4 smiles_exact        18
+    T1 full_inchikey       2
+    定位到的 V6 记录为游离酸本体 .............. 2/20
+    CAS 号与 V6 记录 CAS 号一致 .............. 2/20
+    分子式核对通过 .......................... 20/20
+    在 V6 中可定位（任意分级）................ 20/20
+
+[4] 相对早期 18 条面板的差异
+    新增锚点：PFPeA, PFMOAA
+    结构已修正：ADONA, F-53B (6:2 Cl-PFESA), 6:2 FTS, 4:2 FTS
+    → 早期面板 16/18（88.9%）与 0/18 的计数因此不再成立，统一面板下的重算结果见 table3_anchor_verdicts.csv

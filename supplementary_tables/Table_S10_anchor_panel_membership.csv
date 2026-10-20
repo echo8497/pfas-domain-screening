@@ -1,0 +1,21 @@
+﻿anchor,group,inchikey,smiles,in_panel_by_inchikey,panel_row_index,labels_nonnull_26ep,labels_nonnull_22ep,labels_nonnull_12ep,contributes_to_models,max_sim_to_train,sim_cause
+PFOA,Regulated PFAA,SNGREZUHAYWORS-UHFFFAOYSA-N,O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,False,-1,0,0,0,False,0.7647059,—
+PFNA,Regulated PFAA,UZUFPBIDKMEQEQ-UHFFFAOYSA-N,O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,False,-1,0,0,0,False,0.7647059,—
+PFDA,Regulated PFAA,PCIUEQPBYFRTEM-UHFFFAOYSA-N,O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,False,-1,0,0,0,False,0.7647059,—
+PFHxA,Regulated PFAA,PXUULQAPEKKVAH-UHFFFAOYSA-N,O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,False,-1,0,0,0,False,0.7647059,—
+PFHpA,Regulated PFAA,ZWBAMYVPMDSJGQ-UHFFFAOYSA-N,O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,False,-1,0,0,0,False,0.7647059,—
+PFBA,Regulated PFAA,YPJUNDFVDDCYIH-UHFFFAOYSA-N,O=C(O)C(F)(F)C(F)(F)C(F)(F)F,False,-1,0,0,0,False,0.75,—
+PFPeA,Regulated PFAA,CXZGQIAOTKWCDB-UHFFFAOYSA-N,O=C(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,False,-1,0,0,0,False,0.8125,—
+PFOS,Regulated PFAA,YFSUTJLHUFNCNZ-UHFFFAOYSA-N,O=S(=O)(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,True,465,1,1,1,True,1.0,true self-match (in panel)
+PFHxS,Regulated PFAA,QZHDEAJFRJCDMF-UHFFFAOYSA-N,O=S(=O)(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,False,-1,0,0,0,False,1.0,"fingerprint degeneracy (identical bits to panel row 465, Tanimoto 1.0000)"
+PFBS,Regulated PFAA,JGTNAGYHADQMCM-UHFFFAOYSA-N,O=S(=O)(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,False,-1,0,0,0,False,0.9444444,—
+PFDS,Regulated PFAA,HYWZIAVPBSTISZ-UHFFFAOYSA-N,O=S(=O)(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,False,-1,0,0,0,False,1.0,"fingerprint degeneracy (identical bits to panel row 465, Tanimoto 1.0000)"
+PFOSA,Regulated PFAA,RRRXPPIDPYTNJG-UHFFFAOYSA-N,NS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,False,-1,0,0,0,False,0.5652174,—
+N-EtFOSAA,Regulated PFAA,CKRXVVGETMYFIO-UHFFFAOYSA-N,CCN(CC(=O)O)S(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,False,-1,0,0,0,False,0.4,—
+PFHxSA,Regulated PFAA,WDZLGCSJJWEQJO-UHFFFAOYSA-N,NS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,False,-1,0,0,0,False,0.5652174,—
+GenX / HFPO-DA,Marketed alternative,CSEBNABAWMZWIF-UHFFFAOYSA-N,O=C(O)C(F)(OC(F)(F)C(F)(F)C(F)(F)F)C(F)(F)F,False,-1,0,0,0,False,0.4054054,—
+ADONA,Marketed alternative,AFDRCEOKCOUICI-UHFFFAOYSA-N,O=C(O)C(F)(F)C(F)OC(F)(F)C(F)(F)C(F)(F)OC(F)(F)F,False,-1,0,0,0,False,0.29032257,—
+F-53B (6:2 Cl-PFESA),Marketed alternative,GGOUUEMCWBTDMT-UHFFFAOYSA-N,O=S(=O)(O)C(F)(F)C(F)(F)OC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)Cl,False,-1,0,0,0,False,0.43333334,—
+6:2 FTS,Marketed alternative,VIONGDJUYAYOPU-UHFFFAOYSA-N,O=S(=O)(O)CCC(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)F,False,-1,0,0,0,False,0.4642857,—
+4:2 FTS,Marketed alternative,TXGIGTRUEITPSC-UHFFFAOYSA-N,O=S(=O)(O)CCC(F)(F)C(F)(F)C(F)(F)C(F)(F)F,False,-1,0,0,0,False,0.42857143,—
+PFMOAA,Marketed alternative,IHYMJUVQLSNPPP-UHFFFAOYSA-N,O=C(O)C(F)(F)OC(F)(F)F,False,-1,0,0,0,False,0.3809524,—

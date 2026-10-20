@@ -1,0 +1,17 @@
+# Exact versions used for the results in the accompanying manuscript.
+# Python 3.13 (developed and tested on 3.13.14, Linux and Windows).
+# The manuscript states that versions are pinned here; keep this file in step
+# with the environment actually used for a reported run.
+
+numpy==2.5.3
+pandas==3.0.6
+scipy==1.18.1
+scikit-learn==1.9.1
+joblib==1.6.0
+threadpoolctl==3.7.0
+matplotlib==3.11.2
+rdkit==2026.3.6
+
+# Node.js >= 18 is required only to re-retrieve the PFASSTRUCT V6 inventory
+# through tools/nuxt_payload.js. It is not a Python dependency and is therefore
+# not listed here; see README Section 2.

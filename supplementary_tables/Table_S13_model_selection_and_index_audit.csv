@@ -1,0 +1,141 @@
+﻿block,endpoint,item,value,unit,note
+model_selection,PCBA-1461,n_labeled / n_pos / n_clusters,576 / 20 / 119,substances,
+model_selection,PCBA-1461,family retained on outer-fold AUROC,LR,,the pipeline convention reported in Table 1
+model_selection,PCBA-1461,AUROC (outer-fold selection),0.6616,,mean of per-fold values
+model_selection,PCBA-1461,AUROC (nested selection),0.6053,,family re-selected inside every outer training set
+model_selection,PCBA-1461,selection bias in AUROC,0.0563,,outer-fold minus nested
+model_selection,PCBA-1461,AUROC (fixed LR),0.6616,,no selection; sensitivity analysis
+model_selection,PCBA-1461,AUROC (fixed RF),0.6259,,no selection; sensitivity analysis
+model_selection,PCBA-1461,AUROC (fixed SVM),0.6373,,no selection; sensitivity analysis
+model_selection,PCBA-1461,AUPRC (outer / nested),0.0971 / 0.0806,,AUPRC is the primary measure and is never a maximum over families
+model_selection,PCBA-1461,MCC (outer / nested),-0.0130 / -0.0069,,MCC at a fixed 0.5 threshold
+model_selection,PCBA-1461,families chosen across nested folds,"{""LR"": 7, ""RF"": 8}",folds,
+model_selection,PCBA-1468,n_labeled / n_pos / n_clusters,648 / 16 / 128,substances,
+model_selection,PCBA-1468,family retained on outer-fold AUROC,LR,,the pipeline convention reported in Table 1
+model_selection,PCBA-1468,AUROC (outer-fold selection),0.738,,mean of per-fold values
+model_selection,PCBA-1468,AUROC (nested selection),0.6537,,family re-selected inside every outer training set
+model_selection,PCBA-1468,selection bias in AUROC,0.0843,,outer-fold minus nested
+model_selection,PCBA-1468,AUROC (fixed LR),0.738,,no selection; sensitivity analysis
+model_selection,PCBA-1468,AUROC (fixed RF),0.6854,,no selection; sensitivity analysis
+model_selection,PCBA-1468,AUROC (fixed SVM),0.6462,,no selection; sensitivity analysis
+model_selection,PCBA-1468,AUPRC (outer / nested),0.2092 / 0.2597,,AUPRC is the primary measure and is never a maximum over families
+model_selection,PCBA-1468,MCC (outer / nested),0.1507 / 0.1163,,MCC at a fixed 0.5 threshold
+model_selection,PCBA-1468,families chosen across nested folds,"{""LR"": 5, ""RF"": 10}",folds,
+model_selection,PCBA-1688,n_labeled / n_pos / n_clusters,591 / 20 / 124,substances,
+model_selection,PCBA-1688,family retained on outer-fold AUROC,RF,,the pipeline convention reported in Table 1
+model_selection,PCBA-1688,AUROC (outer-fold selection),0.7904,,mean of per-fold values
+model_selection,PCBA-1688,AUROC (nested selection),0.7462,,family re-selected inside every outer training set
+model_selection,PCBA-1688,selection bias in AUROC,0.0442,,outer-fold minus nested
+model_selection,PCBA-1688,AUROC (fixed LR),0.6449,,no selection; sensitivity analysis
+model_selection,PCBA-1688,AUROC (fixed RF),0.7904,,no selection; sensitivity analysis
+model_selection,PCBA-1688,AUROC (fixed SVM),0.6458,,no selection; sensitivity analysis
+model_selection,PCBA-1688,AUPRC (outer / nested),0.2793 / 0.2681,,AUPRC is the primary measure and is never a maximum over families
+model_selection,PCBA-1688,MCC (outer / nested),0.0658 / 0.0648,,MCC at a fixed 0.5 threshold
+model_selection,PCBA-1688,families chosen across nested folds,"{""LR"": 1, ""RF"": 14}",folds,
+model_selection,PCBA-2546,n_labeled / n_pos / n_clusters,733 / 43 / 134,substances,
+model_selection,PCBA-2546,family retained on outer-fold AUROC,RF,,the pipeline convention reported in Table 1
+model_selection,PCBA-2546,AUROC (outer-fold selection),0.812,,mean of per-fold values
+model_selection,PCBA-2546,AUROC (nested selection),0.812,,family re-selected inside every outer training set
+model_selection,PCBA-2546,selection bias in AUROC,0.0,,outer-fold minus nested
+model_selection,PCBA-2546,AUROC (fixed LR),0.6881,,no selection; sensitivity analysis
+model_selection,PCBA-2546,AUROC (fixed RF),0.812,,no selection; sensitivity analysis
+model_selection,PCBA-2546,AUROC (fixed SVM),0.6616,,no selection; sensitivity analysis
+model_selection,PCBA-2546,AUPRC (outer / nested),0.4240 / 0.4240,,AUPRC is the primary measure and is never a maximum over families
+model_selection,PCBA-2546,MCC (outer / nested),0.3622 / 0.3622,,MCC at a fixed 0.5 threshold
+model_selection,PCBA-2546,families chosen across nested folds,"{""RF"": 15}",folds,
+model_selection,PCBA-2551,n_labeled / n_pos / n_clusters,715 / 45 / 133,substances,
+model_selection,PCBA-2551,family retained on outer-fold AUROC,RF,,the pipeline convention reported in Table 1
+model_selection,PCBA-2551,AUROC (outer-fold selection),0.7501,,mean of per-fold values
+model_selection,PCBA-2551,AUROC (nested selection),0.6934,,family re-selected inside every outer training set
+model_selection,PCBA-2551,selection bias in AUROC,0.0567,,outer-fold minus nested
+model_selection,PCBA-2551,AUROC (fixed LR),0.6846,,no selection; sensitivity analysis
+model_selection,PCBA-2551,AUROC (fixed RF),0.7501,,no selection; sensitivity analysis
+model_selection,PCBA-2551,AUROC (fixed SVM),0.7034,,no selection; sensitivity analysis
+model_selection,PCBA-2551,AUPRC (outer / nested),0.3659 / 0.3138,,AUPRC is the primary measure and is never a maximum over families
+model_selection,PCBA-2551,MCC (outer / nested),0.3001 / 0.2696,,MCC at a fixed 0.5 threshold
+model_selection,PCBA-2551,families chosen across nested folds,"{""LR"": 5, ""RF"": 10}",folds,
+random_replicates,PCBA-1461,"AUROC, random split seed 42",0.7417,,family retained: SVM
+random_replicates,PCBA-1461,"AUROC, random split seed 43",0.723,,family retained: RF
+random_replicates,PCBA-1461,"AUROC, random split seed 44",0.7716,,family retained: RF
+random_replicates,PCBA-1461,"AUROC, random split seed 45",0.7204,,family retained: RF
+random_replicates,PCBA-1461,"AUROC, random split seed 46",0.7356,,family retained: RF
+random_replicates,PCBA-1468,"AUROC, random split seed 42",0.8876,,family retained: RF
+random_replicates,PCBA-1468,"AUROC, random split seed 43",0.8969,,family retained: LR
+random_replicates,PCBA-1468,"AUROC, random split seed 44",0.8614,,family retained: LR
+random_replicates,PCBA-1468,"AUROC, random split seed 45",0.8878,,family retained: RF
+random_replicates,PCBA-1468,"AUROC, random split seed 46",0.9176,,family retained: RF
+random_replicates,PCBA-1688,"AUROC, random split seed 42",0.8094,,family retained: RF
+random_replicates,PCBA-1688,"AUROC, random split seed 43",0.816,,family retained: RF
+random_replicates,PCBA-1688,"AUROC, random split seed 44",0.8633,,family retained: RF
+random_replicates,PCBA-1688,"AUROC, random split seed 45",0.84,,family retained: RF
+random_replicates,PCBA-1688,"AUROC, random split seed 46",0.8155,,family retained: RF
+random_replicates,PCBA-2546,"AUROC, random split seed 42",0.8868,,family retained: RF
+random_replicates,PCBA-2546,"AUROC, random split seed 43",0.9028,,family retained: RF
+random_replicates,PCBA-2546,"AUROC, random split seed 44",0.8788,,family retained: RF
+random_replicates,PCBA-2546,"AUROC, random split seed 45",0.8582,,family retained: RF
+random_replicates,PCBA-2546,"AUROC, random split seed 46",0.873,,family retained: RF
+random_replicates,PCBA-2551,"AUROC, random split seed 42",0.8231,,family retained: RF
+random_replicates,PCBA-2551,"AUROC, random split seed 43",0.806,,family retained: SVM
+random_replicates,PCBA-2551,"AUROC, random split seed 44",0.8119,,family retained: SVM
+random_replicates,PCBA-2551,"AUROC, random split seed 45",0.8247,,family retained: RF
+random_replicates,PCBA-2551,"AUROC, random split seed 46",0.8226,,family retained: RF
+region_by_criterion,"all 19,767",in_range inside — region A,0.7591,share,1153 structures
+region_by_criterion,"all 19,767",in_range inside — region B,0.9007,share,2223 structures
+region_by_criterion,"all 19,767",in_range inside — region C,0.9394,share,6025 structures
+region_by_criterion,"all 19,767",in_range inside — region D,0.678,share,6350 structures
+region_by_criterion,"all 19,767",in_range inside — all regions,0.7968,share,15751 structures
+region_by_criterion,"all 19,767",in_maha inside — region A,0.0402,share,61 structures
+region_by_criterion,"all 19,767",in_maha inside — region B,0.5377,share,1327 structures
+region_by_criterion,"all 19,767",in_maha inside — region C,0.7346,share,4712 structures
+region_by_criterion,"all 19,767",in_maha inside — region D,0.3322,share,3111 structures
+region_by_criterion,"all 19,767",in_maha inside — all regions,0.466,share,9211 structures
+region_by_criterion,"all 19,767",in_class inside — region A,0.0,share,0 structures
+region_by_criterion,"all 19,767",in_class inside — region B,0.0,share,0 structures
+region_by_criterion,"all 19,767",in_class inside — region C,0.8472,share,5434 structures
+region_by_criterion,"all 19,767",in_class inside — region D,0.5427,share,5083 structures
+region_by_criterion,"all 19,767",in_class inside — all regions,0.532,share,10517 structures
+region_by_criterion,"all 19,767",consensus inside — region A,0.0,share,0 structures
+region_by_criterion,"all 19,767",consensus inside — region B,0.0,share,0 structures
+region_by_criterion,"all 19,767",consensus inside — region C,0.6765,share,4339 structures
+region_by_criterion,"all 19,767",consensus inside — region D,0.2006,share,1879 structures
+region_by_criterion,"all 19,767",consensus inside — all regions,0.3146,share,6218 structures
+region_by_criterion,"all 19,767",leverage inside — region A,0.1198,share,182 structures
+region_by_criterion,"all 19,767",leverage inside — region B,0.6536,share,1613 structures
+region_by_criterion,"all 19,767",leverage inside — region C,0.7872,share,5049 structures
+region_by_criterion,"all 19,767",leverage inside — region D,0.48,share,4496 structures
+region_by_criterion,"all 19,767",leverage inside — all regions,0.5737,share,11340 structures
+region_by_criterion,"all 19,767",knn_majority inside — region A,0.2041,share,310 structures
+region_by_criterion,"all 19,767",knn_majority inside — region B,0.1483,share,366 structures
+region_by_criterion,"all 19,767",knn_majority inside — region C,0.4275,share,2742 structures
+region_by_criterion,"all 19,767",knn_majority inside — region D,0.1523,share,1426 structures
+region_by_criterion,"all 19,767",knn_majority inside — all regions,0.2451,share,4844 structures
+region_by_criterion,"all 19,767",knn_any inside — region A,0.5681,share,863 structures
+region_by_criterion,"all 19,767",knn_any inside — region B,0.3067,share,757 structures
+region_by_criterion,"all 19,767",knn_any inside — region C,0.5946,share,3814 structures
+region_by_criterion,"all 19,767",knn_any inside — region D,0.2276,share,2132 structures
+region_by_criterion,"all 19,767",knn_any inside — all regions,0.3828,share,7566 structures
+region_by_criterion,region B,maximum class support in region B,2,panel substances,"criterion (e) requires >= 5; no region-B structure can therefore pass (e), and consensus = range & maha & class is 0/2,468 by construction"
+region_by_criterion,region A,structures inside the class-coverage criterion,0,structures,region A is likewise excluded from the consensus domain by construction
+alt_score_check,"all 2,390",candidates recomputed,2390,structures,
+alt_score_check,"all 2,390",maximum absolute deviation from released ALT_SCORE,2.22e-16,score units,"components recomputed from n_PFC, n_C, n_ether_O, s_panel, s_anchor"
+alt_score_check,"all 2,390",weight sum,1.0,,0.35 + 0.20 + 0.45
+alt_score_check,"all 2,390","components in [0,1]",True,bool,
+alt_score_check,"all 2,390",persistence-proxy sensitivity (Spearman vs unsaturating fraction),0.9272,rho,ranking is highly correlated but tier membership is not; see Section 4.2
+alt_score_check,top 100,Tier I overlap under the two persistence definitions,55,of 100,
+alt_score_check,top 100,"leading family under persistence = min(1, 2 n_PFC/n_C)",67,of 100,Ether-type PFAA (carboxylic acid)
+alt_score_check,top 100,"short-chain share under persistence = min(1, 2 n_PFC/n_C)",0.87,share,
+alt_score_check,top 100,"ether-containing share under persistence = min(1, 2 n_PFC/n_C)",0.86,share,
+alt_score_check,top 100,leading family under persistence = n_PFC/n_C,40,of 100,Ether-type PFAA (carboxylic acid)
+alt_score_check,top 100,short-chain share under persistence = n_PFC/n_C,0.84,share,
+alt_score_check,top 100,ether-containing share under persistence = n_PFC/n_C,0.68,share,
+alt_score_check,"all 2,390",range of novelty,0.4091 to 0.8372,,missing values: 0
+alt_score_check,"all 2,390",range of readacross,0.0 to 0.9915,,missing values: 0
+alt_score_check,"all 2,390",range of persistence,0.1429 to 1.0,,missing values: 0
+alt_score_check,"all 2,390",range of mobility,0.15 to 1.0,,missing values: 0
+alt_score_check,"all 2,390",range of concern,0.2855 to 1.0,,missing values: 0
+alt_score_check,"all 2,390",range of ALT_SCORE,0.4136 to 0.8571,,missing values: 0
+flag_redundancy,"all 2,390",condition (i) anchor similarity >= 0.45,244,candidates,
+flag_redundancy,"all 2,390",condition (ii) panel similarity < 0.60,2390,candidates,"satisfied by construction: the same <0.60 cutoff is part of the candidate selection filter, so the condition cannot exclude anything within the list"
+flag_redundancy,"all 2,390",condition (iii) structural concern >= 0.60,2293,candidates,
+flag_redundancy,"all 2,390",(i) and (iii),239,candidates,"equals the flagged set, confirming that (ii) is vacuous"
+flag_redundancy,"all 2,390",flagged candidates released,239,candidates,Tier I: 73; Tier II: 89; Tier III: 77

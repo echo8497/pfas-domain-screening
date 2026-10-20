@@ -1,0 +1,11 @@
+{
+  "elapsed_sec": 436.0,
+  "n_molecules": 652,
+  "endpoints": [
+    "PCBA-686978"
+  ],
+  "n_features": 2267,
+  "cutoff": 0.7,
+  "n_clusters": 138,
+  "qmsa": true
+}

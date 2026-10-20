@@ -1,0 +1,29 @@
+{
+  "n_records_source": 21028,
+  "n_unique_structures": 19767,
+  "region_counts": {
+    "D: 其他含氟结构": 9366,
+    "C: 含氟芳香物(药/农/材料)": 6414,
+    "B: PFAS 替代物化学空间": 2468,
+    "A: 经典长链 PFAA(监管)": 1519
+  },
+  "n_region_B": 2468,
+  "n_removed_from_B": 78,
+  "n_candidates": 2390,
+  "removed_breakdown_mutually_exclusive": {
+    "C4 即锚定化合物本身（结构相同）": 9,
+    "C5 与锚定化合物近同（Tanimoto ≥ 0.95）": 21,
+    "C1 与已标签面板结构完全相同（exact match）": 2,
+    "C2 与已标签面板近重复（Tanimoto ≥ 0.99）": 0,
+    "C3 与已标签面板化学覆盖重叠（Tanimoto ≥ 0.6）": 46,
+    "合计（互斥，顺序执行）": 78,
+    "最终候选物 (2468 − 剔除)": 2390
+  },
+  "whole_inventory_counts": {
+    "near_dup_train_ge_099": 111,
+    "exact_match_train": 58,
+    "near_dup_reference_ge_095": 107,
+    "is_reference_exact": 20
+  },
+  "elapsed_s": 19.0
+}

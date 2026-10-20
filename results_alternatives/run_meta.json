@@ -1,0 +1,11 @@
+{
+  "n_query": 19767,
+  "n_train": 1012,
+  "n_alt_space": 2468,
+  "n_alt_space_in_train": 6,
+  "n_emerging": 2390,
+  "n_tier1": 100,
+  "n_eligible": 2390,
+  "elapsed_s": 18.9,
+  "generated": "2026-10-13 18:57:58"
+}

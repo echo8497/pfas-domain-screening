@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software or the candidate list it releases, please cite both the archived release and the accompanying manuscript."
+title: "pfas-domain-screening: criterion-dependent applicability-domain analysis and a read-across priority list of 2,390 emerging PFAS alternatives"
+version: "1.0.0"
+date-released: "2026-10-19"
+license: MIT
+repository-code: "https://github.com/echo8497/pfas-domain-screening"
+
+abstract: >-
+  Screens all 19,767 unique structures of the US EPA PFASSTRUCT V6 suspect list
+  against a 26-endpoint PFAS bioactivity panel, quantifies how far the panel's
+  applicability domain extends over replacement chemistry under five different
+  criteria, and releases a tiered read-across priority list of 2,390 candidate
+  alternatives.
+keywords:
+  - per- and polyfluoroalkyl substances
+  - applicability domain
+  - machine learning
+  - chemical space
+  - read-across
+  - regrettable substitution
+  - data leakage
+  - suspect screening
+authors:
+  - family-names: "Li"
+    given-names: "Qian"
+    affiliation: "School of Public Health, Ningxia Medical University, No. 1160 Shengli Street, Xingqing District, Yinchuan, Ningxia 750004, China"
+    email: "liq0907@163.com"
+

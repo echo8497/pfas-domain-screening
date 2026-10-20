@@ -1,0 +1,9 @@
+﻿block,dataset,dataset_n,region,n,median_perfluorinated_carbons,median_molecular_weight_Da,aromatic_fraction,ether_oxygen_fraction,acidic_headgroup_fraction,fraction_of_dataset
+inventory,PFASSTRUCT V6 inventory,19767,A: classical long-chain perfluoroalkyl acids,1519,8.0,610.238,0.0,0.0,1.0,0.0768
+inventory,PFASSTRUCT V6 inventory,19767,B: PFAS replacement chemical space,2468,4.0,398.16,0.0,0.6139,1.0,0.1249
+inventory,PFASSTRUCT V6 inventory,19767,C: fluorinated aromatics,6414,2.0,339.018,1.0,0.3134,0.2155,0.3245
+inventory,PFASSTRUCT V6 inventory,19767,D: other fluorinated structures,9366,2.0,290.125,0.0924,0.2173,0.0677,0.4738
+panel,bioactivity panel,1012,A: classical long-chain perfluoroalkyl acids,1,8.0,500.126,0.0,0.0,1.0,0.001
+panel,bioactivity panel,1012,B: PFAS replacement chemical space,6,3.0,312.164,0.0,0.5,1.0,0.0059
+panel,bioactivity panel,1012,C: fluorinated aromatics,946,2.0,436.944,1.0,0.3647,0.1924,0.9348
+panel,bioactivity panel,1012,D: other fluorinated structures,59,2.0,372.219,0.3559,0.3898,0.1186,0.0583

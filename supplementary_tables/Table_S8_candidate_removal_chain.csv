@@ -1,0 +1,12 @@
+﻿step,criterion,scope,removed_n,remaining_n,note
+0,region B starting set,region B (PFAS-alternative chemical space),,2468.0,"region B from the four-way chemical-space partition of 19,767 unique structures"
+1,C4. identical to an anchor substance (exact structure match),region B,9.0,2459.0,mutually exclusive removal 1 of 5
+2,C5. near-identical to an anchor (Tanimoto ≥ 0.95),region B,21.0,2438.0,mutually exclusive removal 2 of 5
+3,C1. exact match to a labelled panel structure,region B,2.0,2436.0,mutually exclusive removal 3 of 5
+4,C2. near-duplicate of a labelled panel structure (Tanimoto ≥ 0.99),region B,0.0,2436.0,mutually exclusive removal 4 of 5
+5,C3. chemically covered by the labelled panel (maximum similarity ≥ 0.60),region B,46.0,2390.0,mutually exclusive removal 5 of 5
+sum,total removed from region B,region B,78.0,2390.0,ordered sum of steps 1-5; must not be compared with the inventory-wide totals below
+W1,exact matches to a labelled panel structure,"whole inventory — DESCRIPTIVE ONLY, NOT SEQUENTIAL",58.0,,"overlaps with other rows of this block and with the region-B chain; these counts must not be summed, and no combination of them reproduces the region-B removal count"
+W2,near-duplicates of a labelled panel structure (Tanimoto ≥ 0.99),"whole inventory — DESCRIPTIVE ONLY, NOT SEQUENTIAL",111.0,,"overlaps with other rows of this block and with the region-B chain; these counts must not be summed, and no combination of them reproduces the region-B removal count"
+W3,near-identical to an anchor substance (Tanimoto ≥ 0.95),"whole inventory — DESCRIPTIVE ONLY, NOT SEQUENTIAL",107.0,,"overlaps with other rows of this block and with the region-B chain; these counts must not be summed, and no combination of them reproduces the region-B removal count"
+W4,"of the W3 set, records that are themselves anchor substances","whole inventory — DESCRIPTIVE ONLY, NOT SEQUENTIAL",20.0,,"overlaps with other rows of this block and with the region-B chain; these counts must not be summed, and no combination of them reproduces the region-B removal count"

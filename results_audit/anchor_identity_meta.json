@@ -1,0 +1,11 @@
+{
+  "generated": "2026-10-12 18:31:15",
+  "n_anchors": 20,
+  "n_legacy": 14,
+  "n_alternative": 6,
+  "tier_counts": {
+    "T4 smiles_exact": 18,
+    "T1 full_inchikey": 2
+  },
+  "elapsed_s": 4.8
+}

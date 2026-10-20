@@ -1,0 +1,78 @@
+{
+  "n_endpoints": 1,
+  "elapsed_s": 216.2,
+  "protocol": {
+    "folds": 5,
+    "cluster_out_repeats": 3,
+    "seed": 42,
+    "min_pos": 15,
+    "models": [
+      "LR",
+      "RF",
+      "SVM"
+    ],
+    "inner_selection": "cluster-out, 5 folds, 1 repeat, seed 42",
+    "random_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ]
+  },
+  "fold_balance": [
+    {
+      "key": "butina clusters (panel)",
+      "n_groups": 174,
+      "n_singletons": 73,
+      "singleton_share": 0.4195,
+      "largest_group": 141,
+      "largest_group_share": 0.1393,
+      "fold_sizes": [
+        203,
+        203,
+        202,
+        202,
+        202
+      ],
+      "max_fold_size_deviation": 0.003,
+      "n_folds_nonempty": 5
+    },
+    {
+      "key": "murcko scaffold groups (panel)",
+      "n_groups": 552,
+      "n_singletons": 409,
+      "singleton_share": 0.7409,
+      "largest_group": 84,
+      "largest_group_share": 0.083,
+      "fold_sizes": [
+        203,
+        203,
+        202,
+        202,
+        202
+      ],
+      "max_fold_size_deviation": 0.003,
+      "n_folds_nonempty": 5
+    }
+  ],
+  "AUROC_outer_mean": 0.6352,
+  "AUROC_nested_mean": 0.4189,
+  "AUROC_outer_median": 0.6352,
+  "AUROC_nested_median": 0.4189,
+  "bias_mean": 0.2163,
+  "bias_median": 0.2163,
+  "bias_min": 0.2163,
+  "bias_max": 0.2163,
+  "bias_positive_count": 1,
+  "AUPRC_bias_mean": 0.016,
+  "MCC_bias_mean": 0.0033,
+  "deltaAUROC_strategy": {},
+  "random_replicates": {
+    "n_seeds": 5,
+    "AUROC_random_std_median": 0.0252,
+    "AUROC_random_std_max": 0.0252,
+    "AUROC_random_range_median": 0.0623,
+    "model_switch_across_seeds": 1
+  }
+}

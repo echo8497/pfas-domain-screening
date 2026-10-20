@@ -1,0 +1,43 @@
+# Derived feature caches: large, and fully regenerable from SMILES.
+# data/cache/ is ~550 MB and every file in it is a memoised product of
+# pfas_qsar.compute_descriptors() / build_features(). Shipping it would bloat the
+# repository without adding reproducibility, which comes from the code instead.
+data/cache/
+data/cache_audit/
+data/cache_audit_stale_*/
+
+# Raw downloads behind the normalised inventory (JSON payload + saved HTML page).
+# fetch_pfasstruct.py rebuilds them; see README Section 4.1.
+data/raw/
+
+# Superseded result directories kept during development.
+results_screen_v6_prev/
+results_smoke/
+results_smoke_screen/
+results_demo/
+results_trial/
+results_results_paper_figs/
+results_perm_check_PCBA686978/
+
+# Archived audit snapshots and backups.
+_archive_*/
+_backup_*/
+
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Editor and OS cruft
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*~
+*.swp

@@ -1,0 +1,39 @@
+{
+  "n_train": 1012,
+  "n_query": 19767,
+  "endpoints": [
+    "PCBA-2546",
+    "PCBA-2551",
+    "PCBA-504332",
+    "PCBA-504444",
+    "PCBA-588855",
+    "PCBA-624296",
+    "PCBA-624417",
+    "PCBA-651635",
+    "PCBA-686970",
+    "PCBA-686978",
+    "PCBA-686979",
+    "PCBA-884"
+  ],
+  "n_features": 2304,
+  "qmsa": true,
+  "ad_threshold": 0.7033397167921066,
+  "coverage": {
+    "knn_ad_threshold_global": 0.7033397167921066,
+    "v6_in_domain_tanimoto_majority_pct": 0.24505488946223503,
+    "v6_in_maha_pct": 0.4659786512874994,
+    "v6_in_range_pct": 0.7968331056811858,
+    "v6_in_class_pct": 0.5320483634340062,
+    "v6_ad_consensus_pct": 0.3145646785045783,
+    "v6_in_domain_leverage_pct": 0.5736834117468508,
+    "train_in_domain_leverage_pct": 0.9318181818181818,
+    "legacy_reference_consensus_pct": 0.0,
+    "legacy_reference_tanimoto_pct": 0.85
+  },
+  "main_endpoint": "PCBA-686978",
+  "main_clusterout_auroc": 0.7739032560918364,
+  "n_priority_candidates": 98,
+  "n_emerging_strict": 18,
+  "elapsed_s": 51.5,
+  "generated": "2026-10-13 18:52:38"
+}

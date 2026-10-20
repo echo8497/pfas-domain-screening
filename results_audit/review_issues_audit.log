@@ -1,0 +1,94 @@
+================================================================================
+审稿意见第 2、3 项核实：锚点面板统一 + 化学类别判据敏感性/留出验证
+================================================================================
+
+[0] 锚点面板身份核验（20 个 = 14 legacy + 6 alternative）
+    PFOA                   C8HF15O2      式核=OK  V6=exact_structure CAS=335-67-1
+    PFNA                   C9HF17O2      式核=OK  V6=exact_structure CAS=375-95-1
+    PFDA                   C10HF19O2     式核=OK  V6=exact_structure CAS=335-76-2
+    PFHxA                  C6HF11O2      式核=OK  V6=exact_structure CAS=307-24-4
+    PFHpA                  C7HF13O2      式核=OK  V6=exact_structure CAS=375-85-9
+    PFBA                   C4HF7O2       式核=OK  V6=exact_structure CAS=375-22-4
+    PFPeA                  C5HF9O2       式核=OK  V6=exact_structure CAS=2706-90-3
+    PFOS                   C8HF17O3S     式核=OK  V6=exact_structure CAS=1763-23-1
+    PFHxS                  C6HF13O3S     式核=OK  V6=exact_structure CAS=355-46-4
+    PFBS                   C4HF9O3S      式核=OK  V6=exact_structure CAS=375-73-5
+    PFDS                   C10HF21O3S    式核=OK  V6=exact_structure CAS=335-77-3
+    PFOSA                  C8H2F17NO2S   式核=OK  V6=exact_structure CAS=754-91-6
+    N-EtFOSAA              C12H8F17NO4S  式核=OK  V6=exact_structure CAS=2991-50-6
+    PFHxSA                 C6H2F13NO2S   式核=OK  V6=exact_structure CAS=41997-13-1
+    GenX / HFPO-DA         C6HF11O3      式核=OK  V6=exact_structure CAS=13252-13-6
+    ADONA                  C7H2F12O4     式核=OK  V6=exact_structure CAS=919005-14-4
+        ↳ 已改正旧脚本结构：O=C(O)C(F)(F)OC(F)(F)C(F)(F)OC(F)(F)C(F)(F)C(F)(F)F  (C7HF13O4，多 1 个 F、少 1 个 H)
+    F-53B (6:2 Cl-PFESA)   C8HClF16O4S   式核=OK  V6=exact_structure CAS=73606-19-6
+        ↳ 已改正旧脚本结构：O=S(=O)(O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)Cl  (漏掉醚氧，实为全氟氯代磺酸)
+    6:2 FTS                C8H5F13O3S    式核=OK  V6=exact_structure CAS=27619-97-2
+        ↳ 已改正旧脚本结构：OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)C(F)(F)CC  (CH2CH2 错接在全氟链末端，实为 C8H6F12O3S)
+    4:2 FTS                C6H5F9O3S     式核=OK  V6=exact_structure CAS=757124-72-4
+        ↳ 已改正旧脚本结构：OS(=O)(=O)C(F)(F)C(F)(F)C(F)(F)C(F)(F)CCCC  (碳数 9，非 4:2 FTS)
+    PFMOAA                 C3HF5O3       式核=OK  V6=exact_structure CAS=674-13-5
+    分子式核对通过 20/20；在 V6 中精确结构匹配 20/20，仅骨架匹配 0/20，完全不在 V6 内 0/20
+
+[1] 特征计算（训练集 1,012 + 锚点 20）
+    可建模终点 12 个：PCBA-2546, PCBA-2551, PCBA-504332, PCBA-504444, PCBA-588855, PCBA-624296, PCBA-624417, PCBA-651635, PCBA-686970, PCBA-686978, PCBA-686979, PCBA-884
+
+[2] 应用域阈值标定（与 screen_domain.py 同一协议，仅用训练集）
+    (a) kNN Tanimoto 距离阈值 = 0.703
+    (b) 描述符范围包络：锚点越界比例中位 0.0%
+    (d) PCA-10 马氏卡方阈值(99%,df=10) = 23.21
+    (e) 训练集覆盖类别数：粗分箱 29 类，精确 n_CF2 45 类
+
+[3] 逐终点 RF 建模并预测 20 个锚点
+
+[4] Table 3 重算（统一 20 锚点面板）
+    全部 20 个锚点：
+      kNN Tanimoto 域内 ......... 17/20 (85.0%)
+      描述符范围域内 ........... 20/20 (100.0%)
+      马氏距离域内 ............. 3/20 (15.0%)
+      类别覆盖域内 (T=2 ) ...... 3/20 (15.0%)
+      一致域内 (T=2 ) ......... 2/20 (10.0%)
+      类别覆盖域内 (T=3 ) ...... 0/20 (0.0%)
+      一致域内 (T=3 ) ......... 0/20 (0.0%)
+      类别覆盖域内 (T=5 ) ...... 0/20 (0.0%)
+      一致域内 (T=5 ) ......... 0/20 (0.0%)
+      类别覆盖域内 (T=10) ...... 0/20 (0.0%)
+      一致域内 (T=10) ......... 0/20 (0.0%)
+    legacy 14 个：kNN 14/14 (100.0%)，一致域 T5 0/14 (0.0%)
+    alternative 6 个：kNN 3/6 (50.0%)，一致域 T5 0/6 (0.0%)
+    旧稿「16/18（88.9%）」与「0/18」在 20 锚点统一面板下被取代；差异来源：新增 PFPeA / PFMOAA 两个锚点，且 ADONA、F-53B、6:2 FTS、4:2 FTS 的结构已修正。
+
+[5] 化学类别阈值敏感度（清单侧覆盖率，结构标志从 SMILES 现算）
+    coarse      T=2   清单域内  13698 (69.3%)  可用类别  21
+    fine_nCF2   T=2   清单域内  10623 (53.7%)  可用类别  33
+    coarse      T=3   清单域内  10795 (54.6%)  可用类别  16
+    fine_nCF2   T=3   清单域内   8655 (43.8%)  可用类别  24
+    coarse      T=5   清单域内  10517 (53.2%)  可用类别  14
+    fine_nCF2   T=5   清单域内   7711 (39.0%)  可用类别  19
+    coarse      T=10  清单域内   8074 (40.8%)  可用类别  11
+    fine_nCF2   T=10  清单域内   5755 (29.1%)  可用类别  10
+
+[6] 留出化合物检验：类别覆盖能否识别更高的预测误差
+    协议：Tanimoto–Butina 簇外 5 折 × 2 次重复；每折仅用训练折标定
+          类别支持度 / RobustScaler+PCA10 / 马氏卡方阈值，再评估留出集。
+    PCBA-2546      留出 AUROC=0.830  Brier 未覆盖−已覆盖 (T=5) = +0.0033
+    PCBA-2551      留出 AUROC=0.705  Brier 未覆盖−已覆盖 (T=5) = +0.0288
+    PCBA-504332    留出 AUROC=0.649  Brier 未覆盖−已覆盖 (T=5) = -0.0398
+    PCBA-504444    留出 AUROC=0.687  Brier 未覆盖−已覆盖 (T=5) = -0.0098
+    PCBA-588855    留出 AUROC=0.799  Brier 未覆盖−已覆盖 (T=5) = -0.0203
+    PCBA-624296    留出 AUROC=0.657  Brier 未覆盖−已覆盖 (T=5) = -0.0333
+    PCBA-624417    留出 AUROC=0.688  Brier 未覆盖−已覆盖 (T=5) = +0.0331
+    PCBA-651635    留出 AUROC=0.881  Brier 未覆盖−已覆盖 (T=5) = -0.0314
+    PCBA-686970    留出 AUROC=0.789  Brier 未覆盖−已覆盖 (T=5) = -0.0292
+    PCBA-686978    留出 AUROC=0.774  Brier 未覆盖−已覆盖 (T=5) = -0.0247
+    PCBA-686979    留出 AUROC=0.774  Brier 未覆盖−已覆盖 (T=5) = -0.0424
+    PCBA-884       留出 AUROC=0.679  Brier 未覆盖−已覆盖 (T=5) = -0.0457
+
+[7] 汇总（12 终点等权平均）
+    T=2   Brier 覆盖 0.0933 vs 未覆盖 0.0823  (Δ=-0.0110)  12 终点中 p<0.05 的 2 个
+          识别高误差 AUC：类别 0.498 | 马氏 0.565 | 合并 0.514
+    T=3   Brier 覆盖 0.0936 vs 未覆盖 0.0743  (Δ=-0.0194)  12 终点中 p<0.05 的 3 个
+          识别高误差 AUC：类别 0.500 | 马氏 0.565 | 合并 0.515
+    T=5   Brier 覆盖 0.0942 vs 未覆盖 0.0766  (Δ=-0.0176)  12 终点中 p<0.05 的 2 个
+          识别高误差 AUC：类别 0.499 | 马氏 0.565 | 合并 0.517
+    T=10  Brier 覆盖 0.0941 vs 未覆盖 0.0784  (Δ=-0.0157)  12 终点中 p<0.05 的 4 个
+          识别高误差 AUC：类别 0.492 | 马氏 0.565 | 合并 0.514

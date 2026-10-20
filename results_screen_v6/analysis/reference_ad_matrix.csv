@@ -1,0 +1,21 @@
+﻿ref_name,p_max,in_domain_tanimoto,in_maha,in_range,in_class,ad_consensus,n_train_same_class
+PFOA,0.246,True,False,True,False,False,1
+PFNA,0.244,True,False,True,False,False,0
+PFDA,0.258,True,False,True,False,False,0
+PFHxA,0.116,True,False,True,False,False,1
+PFHpA,0.176,True,False,True,False,False,1
+PFBA,0.082,True,False,True,False,False,1
+PFPeA,0.094,True,False,True,False,False,1
+PFOS,0.336,True,False,True,False,False,1
+PFHxS,0.26,True,False,True,False,False,1
+PFBS,0.124,True,False,True,False,False,1
+PFDS,0.39,True,False,True,False,False,1
+PFOSA,0.358,True,False,True,False,False,0
+N-EtFOSAA,0.342,True,False,True,False,False,0
+PFHxSA,0.244,True,False,True,False,False,0
+GenX / HFPO-DA,0.128,True,True,True,False,False,2
+ADONA,0.244,False,False,True,False,False,2
+F-53B (6:2 Cl-PFESA),0.392,False,False,True,False,False,0
+6:2 FTS,0.3,True,False,True,False,False,1
+4:2 FTS,0.172,True,True,True,False,False,1
+PFMOAA,0.124,False,True,True,False,False,2

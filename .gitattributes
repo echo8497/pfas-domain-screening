@@ -1,0 +1,8 @@
+* text=auto eol=lf
+
+# Data tables are archived, not edited: normalising their line endings would change
+# the bytes a reader hashes, so they are stored exactly as produced.
+*.csv -text
+*.sdf -text
+*.xlsx -text
+*.png -text

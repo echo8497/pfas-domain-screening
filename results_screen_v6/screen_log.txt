@@ -1,0 +1,89 @@
+==============================================================================
+PFASSTRUCT V6 域内优先筛查
+==============================================================================
+[数据] 训练集 1012 条 / 终点 26 个 / 可建模终点 12 个
+[数据] 查询集 PFASSTRUCT V6 19767 条
+[数据] 可建模终点: PCBA-2546, PCBA-2551, PCBA-504332, PCBA-504444, PCBA-588855, PCBA-624296, PCBA-624417, PCBA-651635, PCBA-686970, PCBA-686978, PCBA-686979, PCBA-884
+
+[2] 特征计算（训练+查询合并，保证列一致）
+
+[3] 应用域阈值标定
+    (a) kNN Tanimoto 距离（k=5）阈值 = 0.703 （训练集自身 95 分位；中位 0.485）
+    (b) 描述符范围越界比例：中位 0.9%，≤5% 的比例 79.7%
+    [scale] 稳健标准化后有效描述符 204/224 维
+    (c) PCA-10 杠杆值阈值 = 0.033，域内比例 57.4%
+    (d) PCA-10 马氏距离卡方阈值(99%,df=10) = 23.21，域内比例 46.6%（训练集自身 91.7%）
+    (e) 化学类别覆盖（训练集中同类样本 ≥5 条）：域内比例 53.2%；训练集覆盖 29 个类别，查询集命中 15556 条
+    ★ 一致域内（马氏 ∧ 范围 ∧ 类别）：31.5%
+
+[4] 与训练集的相似度（新颖性/重叠判定）
+    最大 Tanimoto 相似度：中位 0.300，≥0.99 的 111 条，<0.5 的 18307 条
+    与训练集标准 SMILES 完全相同的：58 条
+
+[5] 逐终点建模（RF，全部有标签样本训练）并预测 19767 条查询结构
+    PCBA-2546      n= 733 阳性=  43 AD阈值=0.709 域内= 23.7% 预测中位=0.122
+    PCBA-2551      n= 715 阳性=  45 AD阈值=0.712 域内= 25.3% 预测中位=0.124
+    PCBA-504332    n= 704 阳性=  39 AD阈值=0.704 域内= 21.1% 预测中位=0.106
+    PCBA-504444    n= 541 阳性=  38 AD阈值=0.716 域内= 17.2% 预测中位=0.138
+    PCBA-588855    n= 622 阳性=  47 AD阈值=0.715 域内= 18.7% 预测中位=0.088
+    PCBA-624296    n= 589 阳性=  39 AD阈值=0.720 域内= 28.7% 预测中位=0.080
+    PCBA-624417    n= 574 阳性=  34 AD阈值=0.716 域内= 17.9% 预测中位=0.100
+    PCBA-651635    n= 674 阳性=  35 AD阈值=0.715 域内= 18.9% 预测中位=0.062
+    PCBA-686970    n= 677 阳性=  39 AD阈值=0.708 域内= 17.0% 预测中位=0.080
+    PCBA-686978    n= 652 阳性= 214 AD阈值=0.720 域内= 30.7% 预测中位=0.268
+    PCBA-686979    n= 667 阳性= 170 AD阈值=0.716 域内= 31.5% 预测中位=0.210
+    PCBA-884       n= 100 阳性=  43 AD阈值=0.796 域内= 15.1% 预测中位=0.176
+
+[5b] 主终点簇外 AUROC（诚实性能锚点）
+    PCBA-686978: 簇外 5 折×2 次重复 AUROC = 0.774  （随机划分高估 ≈ +0.10，见第一版结果报告）
+
+[6] 综合打分与优先清单
+    p_max 分位：99% = 0.672，99.5% = 0.696；一致域内子集 99% = 0.690，最大值 = 1.000
+    分层计数：
+      A: 域内·新颖·多终点一致: 53
+      C: 域内·活性前1%: 45
+      D: 域外或近重复: 19669
+    候选（域内+非近重复，分层 A/B/C）：98 条
+    严格档（域内+新颖+替代物结构≥0.75+p≥0.690）：18 条
+
+[7] 经典 PFAA / 已知替代物的落点（适用域错配演示）
+    PFOA                   p_max=0.246 kNN=0.506 类别n=  1 一致域内=N (tanimoto=Y/maha=N/range=Y/class=N)
+    PFNA                   p_max=0.244 kNN=0.506 类别n=  0 一致域内=N (tanimoto=Y/maha=N/range=Y/class=N)
+    PFDA                   p_max=0.258 kNN=0.506 类别n=  0 一致域内=N (tanimoto=Y/maha=N/range=Y/class=N)
+    PFHxA                  p_max=0.116 kNN=0.506 类别n=  1 一致域内=N (tanimoto=Y/maha=N/range=Y/class=N)
+    PFHpA                  p_max=0.176 kNN=0.506 类别n=  1 一致域内=N (tanimoto=Y/maha=N/range=Y/class=N)
+    PFBA                   p_max=0.082 kNN=0.589 类别n=  1 一致域内=N (tanimoto=Y/maha=N/range=Y/class=N)
+    PFPeA                  p_max=0.094 kNN=0.537 类别n=  1 一致域内=N (tanimoto=Y/maha=N/range=Y/class=N)
+    PFOS                   p_max=0.336 kNN=0.448 类别n=  1 一致域内=N (tanimoto=Y/maha=N/range=Y/class=N)
+    PFHxS                  p_max=0.260 kNN=0.448 类别n=  1 一致域内=N (tanimoto=Y/maha=N/range=Y/class=N)
+    PFBS                   p_max=0.124 kNN=0.486 类别n=  1 一致域内=N (tanimoto=Y/maha=N/range=Y/class=N)
+    PFDS                   p_max=0.390 kNN=0.448 类别n=  1 一致域内=N (tanimoto=Y/maha=N/range=Y/class=N)
+    PFOSA                  p_max=0.358 kNN=0.535 类别n=  0 一致域内=N (tanimoto=Y/maha=N/range=Y/class=N)
+    N-EtFOSAA              p_max=0.342 kNN=0.697 类别n=  0 一致域内=N (tanimoto=Y/maha=N/range=Y/class=N)
+    PFHxSA                 p_max=0.244 kNN=0.535 类别n=  0 一致域内=N (tanimoto=Y/maha=N/range=Y/class=N)
+    GenX / HFPO-DA         p_max=0.128 kNN=0.691 类别n=  2 一致域内=N (tanimoto=Y/maha=Y/range=Y/class=N)
+    ADONA                  p_max=0.244 kNN=0.761 类别n=  2 一致域内=N (tanimoto=N/maha=N/range=Y/class=N)
+    F-53B (6:2 Cl-PFESA)   p_max=0.392 kNN=0.750 类别n=  0 一致域内=N (tanimoto=N/maha=N/range=Y/class=N)
+    6:2 FTS                p_max=0.300 kNN=0.644 类别n=  1 一致域内=N (tanimoto=Y/maha=N/range=Y/class=N)
+    4:2 FTS                p_max=0.172 kNN=0.674 类别n=  1 一致域内=N (tanimoto=Y/maha=Y/range=Y/class=N)
+    PFMOAA                 p_max=0.124 kNN=0.738 类别n=  2 一致域内=N (tanimoto=N/maha=Y/range=Y/class=N)
+    一致域内参考物占比：0.0%；仅按 Tanimoto 判据则为 85.0%（阈值 0.703）
+
+[8] 适用域覆盖率
+    knn_ad_threshold_global: 0.7033
+    v6_in_domain_tanimoto_majority_pct: 0.2451
+    v6_in_maha_pct: 0.4660
+    v6_in_range_pct: 0.7968
+    v6_in_class_pct: 0.5320
+    v6_ad_consensus_pct: 0.3146
+    v6_in_domain_leverage_pct: 0.5737
+    train_in_domain_leverage_pct: 0.9318
+    legacy_reference_consensus_pct: 0.0000
+    legacy_reference_tanimoto_pct: 0.8500
+
+[9] 化学空间构成对比
+               化学空间     n    含芳环比例  中位全氟碳数(n_CF2)    含醚氧比例   酸性头基比例  无环直链比例(n_rings==0)   中位分子量   中位F/C比
+           训练集(有标签)  1012 0.955534            2.0 0.366601 0.193676            0.024704 433.401 0.352941
+PFASSTRUCT V6(结构全集) 19767 0.368240            3.0 0.281277 0.303688            0.532554 346.133 1.000000
+
+[10] 图已输出

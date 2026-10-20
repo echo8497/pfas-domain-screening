@@ -1,0 +1,12 @@
+{
+  "generated": "2026-10-13 16:03:28",
+  "n_anchors": 20,
+  "n_endpoints": 12,
+  "class_thresholds": [
+    2,
+    3,
+    5,
+    10
+  ],
+  "elapsed_s": 129.0
+}

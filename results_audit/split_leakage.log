@@ -1,0 +1,19 @@
+==========================================================================
+Splitting-strategy leakage audit
+==========================================================================
+panel: 1012 unique structures
+Butina clusters: 174 (cutoff 0.7, mean 5.8 members, largest 141)
+Murcko scaffolds: 552 unique over 1012 structures; empty scaffold 25 (2.5%); singleton groups 409; largest group 84
+primary endpoint PCBA-686978: 652 labelled substances, 214 actives, 147 clusters present, 365 scaffold groups present
+  random       folds=  5  mean max-sim to training 0.601  median 0.629  share >=0.90: 4.0%  share <=0.30: 6.7%
+  scaffold     folds=  5  mean max-sim to training 0.475  median 0.444  share >=0.90: 0.3%  share <=0.30: 13.2%
+  cluster-out  folds= 15  mean max-sim to training 0.412  median 0.355  share >=0.90: 0.0%  share <=0.30: 26.3%
+  random       straddling: cluster 573 substances, scaffold group 366 substances (of 652)
+  scaffold     straddling: cluster 525 substances, scaffold group   0 substances (of 652)
+  cluster-out  straddling: cluster   0 substances, scaffold group 232 substances (of 652)
+
+gap random - cluster-out : +0.1899
+gap scaffold - cluster-out: +0.0637
+gap random - scaffold    : +0.1262
+
+written: code\results_audit\split_leakage.csv

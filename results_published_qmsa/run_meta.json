@@ -1,0 +1,19 @@
+{
+  "n_molecules": 1029,
+  "n_features": 17,
+  "pos_rate": 0.42662779397473277,
+  "n_clusters": 40,
+  "auroc_gap_random_minus_cluster": 0.04902642111630173,
+  "best_model_cluster_out": "RF",
+  "y_randomization": {
+    "real_auroc": 0.7350025095556156,
+    "perm_mean": 0.49769952897571523,
+    "perm_p95": 0.5322400679510444,
+    "p_value": 0.009900990099009901
+  },
+  "source_files": [
+    "PCBA-686978.csv",
+    "CF_PCBA-686978.csv"
+  ],
+  "note": "数据来源：PCBA-686978 / CF_PCBA-686978 已发表 PFAS QMSA 描述符数据集；无 SMILES，故簇外划分在标准化描述符空间的 PCA 上进行。"
+}

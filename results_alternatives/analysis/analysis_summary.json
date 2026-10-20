@@ -1,0 +1,38 @@
+{
+  "space_partition": {
+    "A: 经典长链 PFAA(监管)": 1519,
+    "B: PFAS 替代物化学空间": 2468,
+    "C: 含氟芳香物(药/农/材料)": 6414,
+    "D: 其他含氟结构": 9366
+  },
+  "reference": {
+    "n": 20,
+    "tanimoto_pass_pct": 0.85,
+    "consensus_pass_pct": 0.0,
+    "p_max_min": 0.082,
+    "p_max_max": 0.392
+  },
+  "model_blindspot": {
+    "Tanimoto 多数终点判域内": 0.1448,
+    "一致域判据判域内": 0.0,
+    "进入模型 Tier A/B/C": 0.0
+  },
+  "model_p_max_median_on_alternatives": 0.244,
+  "n_library": 19767,
+  "n_alt_space": 2468,
+  "n_candidates": 2390,
+  "n_tier1": 100,
+  "n_regrettable": 239,
+  "tier1_family": {
+    "醚型 PFAA（羧酸）": 67,
+    "磺酰胺/磺酰乙酸类": 13,
+    "醚型含氟前体/中间体": 9,
+    "醚型 PFAA（磺酸）": 5,
+    "短链 PFSA": 4,
+    "氟磺酰/氟硫酸酯（高反应性中间体）": 2
+  },
+  "tier1_marker_mean": 3.64,
+  "tier1_median_CF2": 4,
+  "tier1_median_MW": 347.5275,
+  "tier1_ether_pct": 0.86
+}

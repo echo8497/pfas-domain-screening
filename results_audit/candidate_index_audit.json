@@ -1,0 +1,134 @@
+{
+  "regions": {
+    "n_total": 19767,
+    "counts": {
+      "A": 1519,
+      "B": 2468,
+      "C": 6414,
+      "D": 9366
+    },
+    "region_B": {
+      "n": 2468,
+      "in_range_pct": 0.9007,
+      "in_maha_pct": 0.5377,
+      "in_class_pct": 0.0,
+      "consensus_pct": 0.0,
+      "leverage_pct": 0.6536,
+      "max_class_support": 2,
+      "class_support_hist": {
+        "0": 821,
+        "1": 661,
+        "2": 986
+      }
+    },
+    "region_A_in_class": 0,
+    "class_min_n": 5,
+    "entailment": "ad_consensus = in_maha & in_range & in_class; region B 中 in_class 为 0，故 ad_consensus 必为 0。region B ⟹ ¬consensus 由 criterion (e) 的定义蕴含，不是独立经验发现。"
+  },
+  "alt_score": {
+    "n": 2390,
+    "max_abs_deviation": 2.220446049250313e-16,
+    "weights": {
+      "novelty": 0.35,
+      "readacross": 0.2,
+      "concern": 0.45
+    },
+    "weight_sum": 1.0,
+    "ranges": {
+      "novelty": [
+        0.4091,
+        0.8372
+      ],
+      "readacross": [
+        0.0,
+        0.9915
+      ],
+      "persistence": [
+        0.1429,
+        1.0
+      ],
+      "mobility": [
+        0.15,
+        1.0
+      ],
+      "concern": [
+        0.2855,
+        1.0
+      ],
+      "ALT_SCORE": [
+        0.4136,
+        0.8571
+      ]
+    },
+    "nan_counts": {
+      "novelty": 0,
+      "readacross": 0,
+      "persistence": 0,
+      "mobility": 0,
+      "concern": 0,
+      "ALT_SCORE": 0
+    },
+    "components_in_unit_interval": true,
+    "persistence_proxy": "min(1, 2 * n_PFC / n_C)",
+    "persistence_sensitivity": {
+      "spearman_vs_true_fraction": 0.9272,
+      "tier1_overlap": 55,
+      "composition": {
+        "saturating": {
+          "leading_family": "醚型 PFAA（羧酸）",
+          "leading_family_n": 67,
+          "short_chain_share": 0.87,
+          "ether_share": 0.86
+        },
+        "true_fraction": {
+          "leading_family": "醚型 PFAA（羧酸）",
+          "leading_family_n": 40,
+          "short_chain_share": 0.84,
+          "ether_share": 0.68
+        }
+      }
+    },
+    "readacross_mapping": {
+      "formula": "clip((s_anchor - 0.30) / 0.65, 0, 1)",
+      "zero_above": 0.95,
+      "at_s_anchor_0.30": 0.0,
+      "at_s_anchor_0.95": 1.0
+    }
+  },
+  "flag": {
+    "condition_i": 244,
+    "condition_ii": 2390,
+    "condition_iii": 2293,
+    "i_and_iii": 239,
+    "all_three": 239,
+    "stored": 239,
+    "ii_vacuous": true,
+    "flag_by_tier": {
+      "II": 89,
+      "III": 77,
+      "I": 73
+    },
+    "rules": {
+      "anchor_sim_min": 0.45,
+      "panel_novel_max": 0.6,
+      "concern_min": 0.6
+    }
+  },
+  "markers": {
+    "definitions": {
+      "short_chain_CF2_le_5": "n_PFC <= 5",
+      "ether_containing": "n_ether_O >= 1",
+      "ionisable": "fine-grained functional group in {carboxylic acid, sulfonic acid, sulfonamide, sulfonyl fluoride}",
+      "high_perfluorinated_share": "min(1, 2*n_PFC/n_C) >= 0.50 (equivalent to n_PFC/n_C >= 0.25)"
+    },
+    "counts": {
+      "short_chain_CF2_le_5": 1706,
+      "ether_containing": 1498,
+      "ionisable": 1209,
+      "high_perfluorinated_share": 2205
+    },
+    "tier1_mean_markers": 3.64,
+    "all_mean_markers": 2.769,
+    "ms_ready_source_column": "smiles_ms_ready (PFASSTRUCT V6 record field, copied verbatim)"
+  }
+}
