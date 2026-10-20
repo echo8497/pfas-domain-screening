@@ -5,7 +5,8 @@ version: "1.0.0"
 date-released: "2026-10-20"
 license: MIT
 repository-code: "https://github.com/echo8497/pfas-domain-screening"
-
+doi: "10.5281/zenodo.23493641"
+url: "https://doi.org/10.5281/zenodo.23493641"
 abstract: >-
   Screens all 19,767 unique structures of the US EPA PFASSTRUCT V6 suspect list
   against a 26-endpoint PFAS bioactivity panel, quantifies how far the panel's
